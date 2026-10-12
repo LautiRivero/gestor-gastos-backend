@@ -40,7 +40,8 @@ export class ExpensesService {
     const {categoryId, startDate, endDate, description} = filters || {};
 
     //condicion base para filtrar los gastos por usuario
-    const whereConditions: any = { userId };
+    const whereConditions: any = { userId };//filtramos por usuario para que este solo vea sus gastos 
+                                            //y no los de otros usuarios
 
     //si viene la categoriID, filtramos por categoria
     if (categoryId) {

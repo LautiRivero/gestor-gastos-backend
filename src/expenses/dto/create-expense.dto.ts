@@ -10,9 +10,6 @@ export class CreateExpenseDto {
     @IsOptional()
     description?: string;
 
-    @IsUUID('4', {message: 'El id debe ser un UUID válido'})
-    userId: string;
-
     @IsUUID('4', {message: 'El category_id debe ser un UUID válido'})
     categoryId: string;
 
